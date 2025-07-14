@@ -55,3 +55,49 @@ I built **Rxplain** to solve this real-world problem by giving users a safe and 
 
 ---
 
+## Project Structure
+rxplain/
+│<br>
+├── backend/<br>
+│   ├── app/<br>
+│   │   ├── init.py<br>
+│   │   ├── main.py                    # FastAPI app entry point<br>
+│   │   ├── routes/<br>
+│   │   │   ├── init.py<br>
+│   │   │   └── chat.py               # LLM chat route<br>
+│   │   ├── services/<br>
+│   │   │   └── llm_handler.py        # GPT/Gemini wrapper<br>
+│   │   ├── utils/<br>
+│   │   │   └── prompt_templates.py   # Reusable prompt templates<br>
+│   │   └── config.py                 # Env & settings management<br>
+│   ├── requirements.txt<br>
+│   ├── .env.example<br>
+│   └── README.md<br>
+│<br>
+├── frontend/<br>
+│   ├── public/<br>
+│   │   └── favicon.ico<br>
+│   ├── src/<br>
+│   │   ├── assets/<br>
+│   │   ├── components/<br>
+│   │   │   ├── ChatBox.jsx<br>
+│   │   │   ├── MessageBubble.jsx<br>
+│   │   │   └── Loader.jsx<br>
+│   │   ├── pages/<br>
+│   │   │   └── Home.jsx<br>
+│   │   ├── App.jsx<br>
+│   │   ├── index.js<br>
+│   │   └── api.js                    # Axios/fetch client for backend<br>
+│   ├── tailwind.config.js<br>
+│   ├── package.json<br>
+│   └── README.md<br>
+│<br>
+├── docs/<br>
+│   ├── wireframes.png<br>
+│   ├── prompt_design.md<br>
+│   └── sample_responses/<br>
+│       └── metformin_response.txt<br>
+│<br>
+├── .gitignore<br>
+├── LICENSE<br>
+└── README.md
