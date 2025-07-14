@@ -1,0 +1,7 @@
+fastapi[all]
+uvicorn
+httpx
+python-dotenv
+pydantic
+openai                    # Optional - only if using GPT
+google-generativeai       # Optional - only if using Gemini
