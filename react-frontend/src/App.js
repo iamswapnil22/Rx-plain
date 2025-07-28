@@ -5,6 +5,8 @@ import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
+const API_URL = 'http://localhost:8000/api';
+
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
@@ -19,6 +21,7 @@ const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding: 20px;
 `;
 
 const ChatContainer = styled.div`
@@ -28,6 +31,7 @@ const ChatContainer = styled.div`
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  gap: 20px;
   padding: 0;
   background-color: transparent;
 `;
@@ -235,9 +239,12 @@ function App() {
     setIsTyping(true);
 
     try {
-      const response = await axios.post('/api/chat', { message: userMessage });
+      const response = await axios.post(`${API_URL}/chat`, { 
+        prompt: userMessage,
+        model: "gemini"  // using gemini model by default
+      });
       setIsTyping(false);
-      setMessages(prev => [...prev, { text: response.data.reply, isUser: false }]);
+      setMessages(prev => [...prev, { text: response.data.response, isUser: false }]);
     } catch (error) {
       console.error("Error in sending message:", error);
       setIsTyping(false);

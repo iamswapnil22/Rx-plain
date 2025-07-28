@@ -1,7 +1,8 @@
-fastapi[all]
-uvicorn
-httpx
-python-dotenv
-pydantic
-openai                    # Optional - only if using GPT
-google-generativeai       # Optional - only if using Gemini
+fastapi[all]>=0.100.0
+uvicorn>=0.23.0
+python-dotenv>=1.0.0
+google-generativeai>=0.3.0
+pydantic>=2.0.0
+python-multipart>=0.0.6
+httpx>=0.24.0
+openai>=1.0.0  # Optional - only if using GPT
