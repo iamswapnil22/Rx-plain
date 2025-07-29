@@ -6,3 +6,4 @@ pydantic>=2.0.0
 python-multipart>=0.0.6
 httpx>=0.24.0
 openai>=1.0.0  # Optional - only if using GPT
+Pillow>=10.0.0  # For image processing
