@@ -1,0 +1,22 @@
+# Frontend dependency list for Rx-plain (derived from package.json)
+# This file lists the npm packages and versions used by the React frontend.
+# Use the existing package.json and run `npm install` or `yarn` to install.
+
+@testing-library/dom@^10.4.0
+@testing-library/jest-dom@^6.6.3
+@testing-library/react@^16.3.0
+@testing-library/user-event@^13.5.0
+ajv@^8.17.1
+ajv-keywords@^5.1.0
+axios@^1.10.0
+react@^19.1.0
+react-dom@^19.1.0
+react-markdown@^10.1.0
+react-scripts@5.0.1
+react-syntax-highlighter@^15.6.1
+styled-components@^6.1.19
+web-vitals@^2.1.4
+
+# Notes:
+# - package.json is the canonical source of truth for frontend dependencies.
+# - To install the frontend dependencies, run `npm install` inside the react-frontend directory.

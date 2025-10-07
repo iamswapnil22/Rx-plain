@@ -1,3 +1,21 @@
+# Backend Python requirements for Rx-plain (FastAPI backend)
+# Inferred from imports across app/ (google.generativeai, openai, fastapi, PIL, dotenv, etc.)
+# Install with: python -m pip install -r requirements.txt
+
+fastapi[all]>=0.100.0
+uvicorn>=0.23.0
+python-dotenv>=1.0.0
+google-generativeai>=0.3.0
+pydantic>=2.0.0
+python-multipart>=0.0.6
+httpx>=0.24.0
+openai>=1.0.0  # Optional - only required if you use the OpenAI GPT service
+Pillow>=10.0.0  # For image processing (PIL)
+
+# Notes:
+# - The code uses google.generativeai (Gemini). Set GEMINI_API_KEY in your environment.
+# - If you want to use GPT/OpenAI features, set OPENAI_API_KEY and keep openai in the env.
+# - If you add development/test tooling, consider adding pytest, flake8, mypy as dev dependencies.
 fastapi[all]>=0.100.0
 uvicorn>=0.23.0
 python-dotenv>=1.0.0
